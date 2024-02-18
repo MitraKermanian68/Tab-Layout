@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab Layout</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/9bf81300c6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="btn_box">
+        <button id="btn1" onclick="openHTML()"><i class="fa-brands fa-html5"></i>HTML</button>
+        <button id="btn2" onclick="openCSS()"><i class="fa-brands fa-css3-alt"></i>CSS</button>
+        <button id="btn3" onclick="openJS()"><i class="fa-brands fa-js"></i>JAVASCRIPT</button>
+      </div>
+      <div id="content1" class="content">
+        <div class="content-left">
+          <h1>Learn HTML</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque excepturi dolorem, rem tempora soluta totam? Asperiores voluptatem expedita labore sequi perspiciatis, reprehenderit adipisci illo est culpa eveniet sit et impedit.</p>
+          <a href="#">WATCH VIDEO</a>
+        </div>
+        <div class="content-right">
+            <img src="./html.png">
+        </div>
+      </div>
+      <div id="content2" class="content">
+        <div class="content-left">
+          <h1>Learn CSS</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque excepturi dolorem, rem tempora soluta totam? Asperiores voluptatem expedita labore sequi perspiciatis, reprehenderit adipisci illo est culpa eveniet sit et impedit.</p>
+          <a href="#">WATCH VIDEO</a>
+        </div>
+        <div class="content-right">
+            <img src="./css.png">
+        </div>
+      </div>
+      <div id="content3" class="content">
+        <div class="content-left">
+          <h1>Learn JAVASCRIPT</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque excepturi dolorem, rem tempora soluta totam? Asperiores voluptatem expedita labore sequi perspiciatis, reprehenderit adipisci illo est culpa eveniet sit et impedit.</p>
+          <a href="#">WATCH VIDEO</a>
+        </div>
+        <div class="content-right">
+            <img src="./java.png">
+        </div>
+      </div>
+    </div>
+
+    <script>
+        var content1 = document.getElementById("content1");
+        var content2 = document.getElementById("content2");
+        var content3 = document.getElementById("content3");
+
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+
+        function openHTML(){
+            content1.style.transform = "translateX(0)";
+            content2.style.transform = "translateX(100%)";
+            content3.style.transform = "translateX(100%)"; 
+            btn1.style.color = "#ff7846";
+            btn2.style.color = "#000";
+            btn3.style.color = "#000";
+            content1.style.transitionDelay = "0.3s";
+            content2.style.transitionDelay = "0s";
+            content3.style.transitionDelay = "0s";
+        }
+
+        function openCSS(){
+            content1.style.transform = "translateX(100%)";
+            content2.style.transform = "translateX(0)";
+            content3.style.transform = "translateX(100%)";
+            btn1.style.color = "#000";
+            btn2.style.color = "#ff7846";
+            btn3.style.color = "#000";
+            content2.style.transitionDelay = "0.3s";
+            content1.style.transitionDelay = "0s";
+            content3.style.transitionDelay = "0s";
+        }
+
+        function openJS(){
+            content1.style.transform = "translateX(100%)";
+            content2.style.transform = "translateX(100%)";
+            content3.style.transform = "translateX(0)";
+            btn1.style.color = "#000";
+            btn2.style.color = "#000";
+            btn3.style.color = "#ff7846";
+            content3.style.transitionDelay = "0.3s";
+            content2.style.transitionDelay = "0s";
+            content1.style.transitionDelay = "0s";
+        }
+    </script>
+  </body>
+</html>
